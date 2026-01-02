@@ -40,6 +40,32 @@
     h2 { font-size: 1.4rem; color: var(--accent); }
     .meta { color: var(--muted); margin-top: -12px; font-size: 0.95rem; }
     hr { margin: 28px 0; border: none; border-top: 1px solid var(--border); }
+    .page-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 12px 0 24px;
+      padding: 0;
+      list-style: none;
+    }
+    .page-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      background: #f8fafc;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .page-nav a[aria-current="page"] {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: transparent;
+    }
     ul, ol { margin-top: 10px; padding-left: 20px; }
     li { margin-bottom: 6px; }
     code {
@@ -55,6 +81,13 @@
   <main class="page">
     <h1>User Data Deletion Instructions — o10</h1>
     <p class="meta"><strong>Effective Date:</strong> December 16, 2025</p>
+    <nav aria-label="Legal pages">
+      <ul class="page-nav">
+        <li><a href="index.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        <li><a href="data-deletion.html" aria-current="page">Data Deletion</a></li>
+      </ul>
+    </nav>
 
     <p>
       If you used <strong>Google Sign-In</strong> with the o10 app and want to delete your data, follow the instructions below.
